@@ -1,0 +1,216 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "SUSE", sans-serif;
+  letter-spacing: 1.2px;
+}
+h3,
+h4,
+p,
+h5 {
+  display: inline;
+}
+ul,
+li {
+  list-style: none;
+}
+
+input {
+  width: 100%;
+  padding: 8px 15px;
+  border: 1px solid #b9b9b9;
+  border-radius: 3px;
+  outline: none;
+  font-size: 13px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  padding: 6px 15px;
+  border-radius: 4px;
+  margin-right: 30px;
+}
+span {
+  color: red;
+  margin-left: 3px;
+}
+#submit {
+  text-align: right;
+}
+#submit button {
+  padding: 8px 45px;
+  border: none;
+  background-color: #182c9e;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 3px;
+}
+hr {
+  height: 3px;
+  background-color: #000000;
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+.main,
+#resumeOutput {
+  width: 100%;
+  padding: 20px 170px;
+  background-color: rgb(0, 0, 0);
+}
+.subdiv {
+  background-color: #efeeee;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 5px;
+}
+.flex {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+.Personal,
+.Education,
+.Experience,
+.Skills {
+  width: 100%;
+  padding: 20px;
+  background-color: #fffdfdf5;
+  border-radius: 6px;
+  box-shadow: 0px 7px 11px 1px black;
+}
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.img {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  border-radius: 5px;
+}
+#toggle {
+  display: block;
+}
+#toggle-btn {
+  color: #000000;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  .main {
+    padding: 0%;
+  }
+  #resumeOutput {
+    padding: 0%;
+    margin-top: 20px;
+  }
+  .subdiv {
+    background-color: #efeeee;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 5px;
+  }
+  .Personal,
+  .Education,
+  .Experience,
+  .Skills {
+    width: 100%;
+    padding: 15px;
+    background-color: #fffdfdf5;
+    border-radius: 6px;
+    box-shadow: 0px 7px 11px 1px black;
+  }
+  .flex {
+    padding-top: 20px;
+    display: contents;
+    gap: 10px;
+  }
+  .img {
+    width: 120px;
+    height: 120px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: right;
+    border-radius: 5px;
+  }
+  #toggle {
+    display: block;
+  }
+  #toggle-btn {
+    color: #000000;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: right;
+  }
+  input {
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid #b9b9b9;
+    border-radius: 3px;
+    outline: none;
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .main,
+  #resumeOutput {
+    width: 100%;
+    padding: 20px 50px;
+    background-color: rgb(0, 0, 0);
+  }
+  .subdiv {
+    background-color: #efeeee;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 5px;
+  }
+  .Personal,
+  .Education,
+  .Experience,
+  .Skills {
+    width: 100%;
+    padding: 15px;
+    background-color: #fffdfdf5;
+    border-radius: 6px;
+    box-shadow: 0px 7px 11px 1px black;
+  }
+  .img {
+    width: 120px;
+    height: 120px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: right;
+    border-radius: 5px;
+  }
+  #toggle {
+    display: block;
+  }
+  #toggle-btn {
+    color: #000000;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: right;
+  }
+}

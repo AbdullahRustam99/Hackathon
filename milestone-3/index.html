@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Resume Generator</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="subdiv">
+        <h2>Resume Builder</h2>
+        <div class="Personal">
+          <h3>Personal Information</h3>
+          <div class="flex">
+            <label
+              ><div>Name<span>*</span></div>
+              <input type="text" placeholder="name" id="First-name" required />
+            </label>
+            <label
+              ><div>Date Of Birth<span>*</span></div>
+              <input type="date" placeholder="date_of_birth" id="D-O-B" required />
+            </label>
+            <label
+              ><div>Email<span>*</span></div>
+              <input type="email" id="Email" placeholder="email" required />
+            </label>
+            <label
+              ><div>Cell Number<span>*</span></div>
+              <input type="number" id="Number" placeholder="number" required />
+            </label>
+            <label>
+              <div>Uplode Your Picture<span>*</span></div>
+              <input type="file" id="Picture" placeholder="Picture" accept="image/*" required />
+            </label>
+          </div>
+        </div>
+        <div class="Education">
+          <div><h3>Education </h3><span>*</span></div>
+          <label>
+            <input
+              type="text"
+              placeholder="Use , for add 1 & multiple"
+              id="Education"
+              required
+            />
+          </label>
+          <div id="classlist"></div>
+        </div>
+        <div class="Experience">
+          <div><h3>Experience</h3><span>*</span></div>
+          <label>
+            <div
+              ><input
+                type="text"
+                placeholder="Use , for add 1 & multiple"
+                id="Experience"
+                required
+              />
+            </div>
+          </label>
+        </div>
+        <div class="Skills">
+          <div><h3>Skills</h3><span>*</span></div>
+          <label>
+            <input
+              type="text"
+              placeholder="Use , for add 1 & multiple"
+              id="Skills"
+              required
+              style="display: inline"
+            />
+          </label>
+        </div>
+        <div id="submit">
+          <button id="sub-btn">Generate Resume</button>
+        </div>
+      </div>
+    </div>
+    <div id="resumeOutput"> </div>
+    <script src="script.js"></script>
+  </body>
+</html>
