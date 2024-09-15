@@ -7,9 +7,25 @@ const educationEle = document.getElementById("Education");
 const experienceEle = document.getElementById("Experience");
 const skillEle = document.getElementById("Skills");
 
+console.log(pictureEle);
 
 const output = document.getElementById("resumeOutput");
 const submitBtn = document.getElementById("sub-btn");
+
+let img = "";
+function handleImageUpload() {
+  if (pictureEle) {
+    const file = pictureEle.files[0];
+    const reader = new FileReader();
+    reader.addEventListener("load", () => {
+      img = reader.result;
+    });
+    reader.addEventListener("error", () => {
+      console.error("Error reading file");
+    });
+    reader.readAsDataURL(file);
+  }
+}
 
 function generateResume() {
   if (NameEle && emailEle && numberEle && pictureEle && dateEle && educationEle && experienceEle && skillEle) {
@@ -24,19 +40,6 @@ function generateResume() {
       skill: skillEle.value,
 
     };
-    let img;
-    pictureEle.addEventListener("change", (event) => {
-      const file = event.target.file[0];
-      console.log(file);
-
-      const reader = new FileReader();
-      reader.addEventListener("load", () => {
-        img = reader.result;
-        console.log(img);
-
-      });
-      reader.readAsDataURL(file);
-    });
 
     let skill = userDetails.skill.trim().split(",");
     let education = userDetails.education.trim().split(",");
@@ -77,7 +80,7 @@ function generateResume() {
       </div>`;
 
 
-    if (userDetails.date !== "" && userDetails.education !== "" && userDetails.email !== "" && userDetails.experience !== "" && userDetails.name !== "" && userDetails.number !== "" && userDetails.picture !== "" && userDetails.skill !== "") {
+    if (userDetails.date !== "" && userDetails.education !== "" && userDetails.email !== "" && userDetails.experience !== "" && userDetails.name !== "" && userDetails.number !== "" && img !== "" && userDetails.skill !== "") {
       output.innerHTML = resume;
     } else {
       alert("Fill Complete Information");
@@ -85,5 +88,7 @@ function generateResume() {
   }
 
 
-}
+};
+
+pictureEle.addEventListener("change", handleImageUpload);
 submitBtn.addEventListener("click", generateResume);
